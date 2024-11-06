@@ -24,8 +24,8 @@ This application is a Flask-based web app designed to track job posting trends o
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/job-trends-tracker.git
-   cd job-trends-tracker
+   git clone https://github.com/aksharpatel17/civision-backend.git
+   cd civision-backend
    ```
 
 2. Install the required packages:
@@ -38,8 +38,10 @@ This application is a Flask-based web app designed to track job posting trends o
    python
    >>> from app import db
    >>> db.create_all()
+
    >>> exit()
-   ```
+```
+
 
 ### API Authorization
 
@@ -61,6 +63,12 @@ python app.py
 ```
 
 The app will be accessible at `http://127.0.0.1:5000/`.
+
+   ![Screenshot (461)](https://github.com/user-attachments/assets/d9f1e64d-dd9e-4d3e-810a-124ec7691862)
+   
+![Screenshot (460)](https://github.com/user-attachments/assets/dad3d36a-ff51-42a8-a3a4-1123013aab54)
+
+![Screenshot (459)](https://github.com/user-attachments/assets/7f9c9fec-239c-4070-8d47-d2dcc00ce9bd)
 
 ## Usage
 
