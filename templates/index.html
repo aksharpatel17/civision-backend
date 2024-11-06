@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>French Job Market Trends</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .chart-container {
+            margin-bottom: 30px;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>French Job Market Trends</h1>
+    
+    <div class="controls">
+        <form method="get" action="/">
+            <label for="months">Select Time Period:</label>
+            <select name="months" id="months" onchange="this.form.submit()">
+                {% for month in month_options %}
+                <option value="{{ month }}" {% if month == selected_months %}selected{% endif %}>
+                    Last {{ month }} months
+                </option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+
+   
+    <div class="chart-container">
+        <h2>Departments</h2>
+        {{ department_chart | safe }}
+    </div>
+
+    <div class="chart-container">
+        <h2>Top Municipalities</h2>
+        {{ municipality_chart | safe }}
+    </div>
+
+    <div class="chart-container">
+        <h2>Contract Types</h2>
+        {{ contract_chart | safe }}
+    </div>
+
+</body>
+</html>
